@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Camera
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background-color: rgb(187, 187, 197); height: 100%;">
+    <app-explore-container name="Take your picture"></app-explore-container>
+
+    <ion-fab vertical="bottom" horizontal="center">
+      <ion-fab-button (click)="takePhoto()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-content>

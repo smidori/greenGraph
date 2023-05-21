@@ -1,0 +1,8 @@
+{
+  "name": "GreenGraph",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "com.silvia.greengraph"
+}
