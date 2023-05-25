@@ -4,8 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
   <div style="background-color: rgb(241, 176, 138); height: 100%;">
-  
+    <ion-grid>
+      <ion-row>
+        <ion-col sizeLg="2" sizeMd="3" sizeSm="4" *ngFor="let photo of photoService.favoritePhotos; index as position ">
+          <ion-img [src]="photo.data"></ion-img>
+          <ion-icon name="trash" style="padding: 1% 0%;" (click)="removePhoto(photo, position)"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

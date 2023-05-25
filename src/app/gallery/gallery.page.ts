@@ -1,4 +1,5 @@
-import { PhotoService } from './../services/photo.service';
+import { Photo } from '@capacitor/camera';
+import { PhotoService, UserPhoto } from './../services/photo.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -11,7 +12,21 @@ export class GalleryPage implements OnInit {
 
   constructor(public photoService: PhotoService) { }
 
-  ngOnInit() {
+  ionViewWillEnter(){
+    
   }
+  
+  async ngOnInit(){
+    this.photoService.loadFiles(false);
+  }
+
+  async removePhoto(photo: UserPhoto, index: number){
+    this.photoService.removePhoto(photo, index, false)
+  }
+
+  async addToFavorite(photo: UserPhoto){
+    this.photoService.addToFavorite(photo);
+  }
+
 
 }
